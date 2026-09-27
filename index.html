@@ -4,279 +4,447 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IbrahimaSy</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Ibrahima Sy | Full Stack Developer</title>
+  <meta name="description"
+    content="Ibrahima Sy is a full-stack developer building responsive web applications, workflow automation tools, and API-driven products using JavaScript, React, Python, FastAPI, and PostgreSQL.">
+  <meta name="theme-color" content="#121214">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ibrahima Sy | Full Stack Developer">
+  <meta property="og:description"
+    content="Full-stack developer building responsive web applications, workflow automation tools, and API-driven products.">
+  <meta property="og:url" content="https://ibrahimasy11.github.io/">
+  <meta property="og:image" content="https://ibrahimasy11.github.io/img/ibrahima-sy-800.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <!-- =========================================================== -->
-  <header>
-    <p>I-SY</p>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icons, referenced below with <use href="#icon-..."> -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z" />
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z" />
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"
+        d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7" />
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M4.5 19.5h15" />
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        d="M8 16 16.5 7.5M9.5 7.5h7v7" />
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Ibrahima Sy, back to top">I-SY</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon" aria-hidden="true">
+          <use href="#icon-menu" />
+        </svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#technologies">Technologies</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <!-- =========================================================== -->
-  <main>
 
-    <section class="first-section" id="home">
-      <div>
-        <h1 id="p1">Salutation, I'm Ibrahima Sy</h1>
-        <h2 id="p2">A software Developer</h2>
-      </div>
-
-      <figure>
-        <img src="./img/Marcy-336.jpg" alt="Ibrahima Sy headshot">
-
-        <div class="card-footer">
-          <a href="https://www.linkedin.com/in/ibrahima-sy-584361390/" target="_blank" rel="noopener noreferrer">
-            <i class="ri-linkedin-box-fill icon"></i>
-          </a>
-          <a href="https://github.com/IbrahimaSy11" target="_blank" rel="noopener noreferrer">
-            <i class="ri-github-fill icon"></i>
-          </a>
-          <a href="https://docs.google.com/document/d/1ZZ5FWJ2-_qyqKN_VTO6WJihqnBLgbURJ7UUn6v_I5Dg/edit?usp=sharing"
-            target="_blank" rel="noopener noreferrer">
-            <i class="ri-article-fill icon"></i>
-          </a>
-        </div>
-      </figure>
-    </section>
+  <main id="main">
     <!-- =========================================================== -->
-    <section class="about-section" id="about">
-      <div class="about-title">
-        <h2>About</h2>
-        <div class="about-line"></div>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-left">
-          <p class="about-text">
-            <strong>I'm Ibrahima Sy,</strong> a software developer at Marcy Lab School who thrives on learning,
-            building, and problem-solving. Driven by curiosity and growth, I'm passionate about creating meaningful
-            solutions in technology. If you believe I could be a strong fit, let's connect.
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 id="hero-name">Ibrahima Sy</h1>
+          <p class="hero-role">Full Stack Developer</p>
+          <p class="hero-intro">
+            Full-stack developer building responsive web applications, workflow automation tools, and API-driven
+            products using JavaScript, React, Python, FastAPI, and PostgreSQL.
           </p>
-
-          <div class="about-links">
-            <span>My Links</span>
-            <span class="arrow">→</span>
-
-            <a href="https://github.com/IbrahimaSy11" target="_blank" rel="noopener noreferrer">
-              <i class="ri-github-fill"></i>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn" href="https://github.com/IbrahimaSy11" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true">
+                <use href="#icon-github" />
+              </svg>
+              GitHub<span class="visually-hidden"> (opens in a new tab)</span>
             </a>
-            <a href="https://www.linkedin.com/in/ibrahima-sy-584361390/" target="_blank" rel="noopener noreferrer">
-              <i class="ri-linkedin-box-fill"></i>
+            <a class="btn" href="https://www.linkedin.com/in/ibrahima-sy-584361390/" target="_blank"
+              rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true">
+                <use href="#icon-linkedin" />
+              </svg>
+              LinkedIn<span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+            <a class="btn" href="Ibrahima-Sy-Resume.pdf" download>
+              <svg class="icon" aria-hidden="true">
+                <use href="#icon-download" />
+              </svg>
+              Download Resume
             </a>
           </div>
         </div>
 
-        <div class="about-right">
-          <p class="skills-title">Skills</p>
+        <img class="hero-photo" src="img/ibrahima-sy-800.jpg"
+          srcset="img/ibrahima-sy-400.jpg 400w, img/ibrahima-sy-800.jpg 801w"
+          sizes="(max-width: 860px) 260px, 380px" width="801" height="1200"
+          alt="Portrait of Ibrahima Sy smiling, wearing a navy sweater over a light blue collared shirt"
+          fetchpriority="high">
+      </div>
+    </section>
 
-          <div class="skills">
-            <span class="chip">JavaScript</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">Github</span>
+    <!-- =========================================================== -->
+    <section class="section" id="technologies" aria-labelledby="technologies-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="technologies-title">Technologies</h2>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-group">
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li>JavaScript (ES6+)</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+            </ul>
+          </div>
+
+          <div class="tech-group">
+            <h3>Frameworks &amp; Libraries</h3>
+            <ul class="chips">
+              <li>React</li>
+              <li>FastAPI</li>
+              <li>SQLAlchemy</li>
+              <li>Express.js</li>
+              <li>Node.js</li>
+              <li>DOM APIs</li>
+              <li>Tampermonkey</li>
+            </ul>
+          </div>
+
+          <div class="tech-group">
+            <h3>Tools</h3>
+            <ul class="chips">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>PostgreSQL</li>
+              <li>REST APIs</li>
+              <li>JWT</li>
+              <li>Vercel</li>
+              <li>Render</li>
+              <li>VS Code</li>
+              <li>Chrome DevTools</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-    <!-- =========================================================== -->
-    <section class="projects-section" id="projects">
-      <div class="projects-title">
-        <div class="projects-line"></div>
-        <h2>Projects</h2>
-      </div>
 
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>Anime Explorer</h3>
-          <p>A web app to search and discover anime titles, browse details, and explore series — built with a modern
-            Vite setup.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Vite</span>
+    <!-- =========================================================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="projects-title">Projects</h2>
+        </div>
+
+        <div class="project-list">
+          <article class="project" aria-labelledby="project-carecompass">
+            <div class="project-summary">
+              <h3 id="project-carecompass" class="project-title">
+                <a href="https://care-compass-three.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  CareCompass
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-external" />
+                  </svg>
+                  <span class="visually-hidden">(live site, opens in a new tab)</span>
+                </a>
+              </h3>
+              <p class="project-description">
+                AI-powered benefits navigator that screens users for programs like Medicaid, SNAP, and WIC through a
+                guided questionnaire.
+              </p>
+              <ul class="chips" aria-label="Technologies used">
+                <li>React</li>
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-small" href="https://care-compass-three.vercel.app/" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-external" />
+                  </svg>
+                  Live Site<span class="visually-hidden"> for CareCompass (opens in a new tab)</span>
+                </a>
+                <a class="btn btn-small" href="https://github.com/Commit-Crew-Marcy/Care-Compass" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-github" />
+                  </svg>
+                  GitHub<span class="visually-hidden"> repository for CareCompass (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+            <ul class="project-highlights" aria-label="CareCompass highlights">
+              <li>Led development of a 3-person team as Tech Lead, building the MVP end to end; authored approximately
+                75% of the project’s commits.</li>
+              <li>Designed the entire UI and visual system, including the home page, responsive 8-step questionnaire,
+                results views, and account navigation.</li>
+              <li>Built a rules-based Python eligibility engine that screens households against 18 federal and state
+                programs using SQLAlchemy models.</li>
+              <li>Implemented JWT authentication with bcrypt and full CRUD for saved screenings, automatically
+                re-running eligibility when answers change.</li>
+              <li>Deployed the app on Vercel and Render, adding automatic database seeding and a backend warm-up to hide
+                cold-start delays.</li>
+            </ul>
+          </article>
+
+          <article class="project" aria-labelledby="project-workflow-script">
+            <div class="project-summary">
+              <h3 id="project-workflow-script" class="project-title">Amazon Operations Workflow Script</h3>
+              <p class="project-description">
+                Browser-based JavaScript tool that adds workflow automation to an internal warehouse operations
+                dashboard.
+              </p>
+              <ul class="chips" aria-label="Technologies used">
+                <li>JavaScript</li>
+                <li>Tampermonkey</li>
+                <li>DOM APIs</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-small" href="https://github.com/IbrahimaSy11/amazon-como-script-dashboard"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-github" />
+                  </svg>
+                  GitHub<span class="visually-hidden"> repository for Amazon Operations Workflow Script (opens in a new
+                    tab)</span>
+                </a>
+              </div>
+            </div>
+            <ul class="project-highlights" aria-label="Amazon Operations Workflow Script highlights">
+              <li>Built and continuously improved a 9,800+ line Tampermonkey userscript across 145+ commits.</li>
+              <li>Automated task prioritization by deadline and added a live, color-coded countdown for urgent tasks.
+              </li>
+              <li>Implemented live data synchronization so multiple dashboard views stayed consistent with each other.
+              </li>
+              <li>Added workflow features while preserving existing records and preventing unintended data loss.</li>
+              <li>Fixed data-accuracy bugs and reduced lag with targeted DOM updates, local caching, and fewer network
+                requests.</li>
+              <li>Leveraged AI-assisted coding tools to accelerate implementation, debugging, and refactoring while
+                validating generated solutions against requirements and existing system behavior.</li>
+            </ul>
+          </article>
+
+          <article class="project" aria-labelledby="project-anime-explorer">
+            <div class="project-summary">
+              <h3 id="project-anime-explorer" class="project-title">
+                <a href="https://ibrahim-zoulkarnein-anime-explorer.github.io/anime-explorer/" target="_blank"
+                  rel="noopener noreferrer">
+                  Anime Explorer Website
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-external" />
+                  </svg>
+                  <span class="visually-hidden">(live site, opens in a new tab)</span>
+                </a>
+              </h3>
+              <p class="project-description">
+                A responsive anime discovery application with search, category filters, and detailed title views.
+              </p>
+              <ul class="chips" aria-label="Technologies used">
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-small" href="https://ibrahim-zoulkarnein-anime-explorer.github.io/anime-explorer/"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-external" />
+                  </svg>
+                  Live Site<span class="visually-hidden"> for Anime Explorer (opens in a new tab)</span>
+                </a>
+                <a class="btn btn-small" href="https://github.com/ibrahim-zoulkarnein-anime-explorer/anime-explorer"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-github" />
+                  </svg>
+                  GitHub<span class="visually-hidden"> repository for Anime Explorer (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+            <ul class="project-highlights" aria-label="Anime Explorer Website highlights">
+              <li>Implemented reusable Fetch API functions for popular, search, collection, and detail endpoints using
+                async/await and structured error handling.</li>
+              <li>Developed search filters, TV/movie category toggles, and detail modals using DOM manipulation, with
+                responsive Flexbox layouts.</li>
+              <li>Collaborated through Git and GitHub using feature branches, pull requests, and structured commit
+                messages.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================== -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="experience-title">Work Experience</h2>
+        </div>
+
+        <article class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>Amazon</h3>
+              <p class="entry-role">FC Associate I, Direct, L1 — Dispatcher Function</p>
+            </div>
+            <p class="entry-meta">
+              <span><time datetime="2022-09">September 2022</time> – Present</span>
+              <span>New York, NY</span>
+            </p>
           </div>
-          <div class="project-links">
-            <a href="https://zoulkarnein-ibrahima-mls.github.io/mod-4-project" target="_blank"
-              rel="noopener noreferrer">Live</a>
-            <a href="https://github.com/zoulkarnein-ibrahima-mls/mod-4-project" target="_blank"
-              rel="noopener noreferrer">Code</a>
+          <ul class="entry-list">
+            <li>Adjust delivery routes and prioritize critical shipments in real time to address recurring delays and
+              support on-time delivery.</li>
+            <li>Coordinate time-sensitive communication between dispatch and drivers across language barriers, reducing
+              miscommunication and escalating delivery exceptions.</li>
+            <li>Coach drivers and streamline workflows to improve route efficiency and maintain operations during peak
+              shifts.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================== -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="education-title">Education</h2>
+        </div>
+
+        <article class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>The Marcy Lab School</h3>
+              <p class="entry-role">Software Engineering Fellowship</p>
+            </div>
+            <p class="entry-meta">
+              <span><time datetime="2025-09">September 2025</time> – <time datetime="2026-08">August 2026</time></span>
+              <span>Brooklyn, NY</span>
+            </p>
           </div>
+          <ul class="entry-list">
+            <li>Completed 2,000+ hours of intensive coursework in computer science fundamentals, leadership development,
+              and full-stack web development.</li>
+            <li>Built and iterated on full-stack applications with HTML, CSS, JavaScript, React, Python, SQL, and modern
+              developer tools.</li>
+          </ul>
         </article>
 
-        <article class="project-card">
-          <h3>Project Title</h3>
-          <p>Short description of what the project does and what problem it solves.</p>
-          <div class="project-tags">
-            <span class="tag">N/A</span>
-            <span class="tag">N/A</span>
-            <span class="tag">N/A</span>
+        <article class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>John Jay College of Criminal Justice, CUNY</h3>
+              <p class="entry-role">B.S. Computer Science &amp; Information Security — Degree in Progress</p>
+            </div>
+            <p class="entry-meta">
+              <span><time datetime="2022-09">September 2022</time> – <time datetime="2025-05">May 2025</time></span>
+              <span>New York, NY</span>
+            </p>
           </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">Live</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
-          </div>
-        </article>
-        <!-- =========================================================== -->
-        <article class="project-card">
-          <h3>Project Title</h3>
-          <p>Short description of what the project does and what problem it solves.</p>
-          <div class="project-tags">
-            <span class="tag">N/A</span>
-            <span class="tag">N/A</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">Live</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
-          </div>
+          <ul class="entry-list">
+            <li>GPA: 3.3</li>
+            <li>Relevant Coursework: Data Structures, Object-Oriented Programming, Discrete Structures, Computer
+              Architecture, Databases, Operating Systems.</li>
+          </ul>
         </article>
       </div>
     </section>
+
     <!-- =========================================================== -->
-    <section class="experience-section" id="experience">
-
-      <div class="experience-title">
-        <h2>Experience</h2>
-        <div class="experience-line"></div>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>Software Engineer</h3>
-            <p class="experience-sub">Marcy-Lab-School | Bronklyn, NY</p>
-          </div>
-          <span class="experience-date">2025 – Present</span>
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="contact-title">Contact</h2>
         </div>
-        <p class="experience-desc">
-          Aspiring software engineer with 3 months of hands-on experience learning JavaScript and a strong foundation
-          in HTML and CSS. Actively building projects to strengthen problem-solving skills, front-end development,
-          and clean coding practices. Highly motivated, fast learner, and passionate about growing as a developer.
+        <p class="contact-intro">
+          I’m interested in software engineering and front-end engineering opportunities. Email is the best way to
+          reach me.
         </p>
 
-        <div class="experience-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Git</span>
-        </div>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <svg class="icon contact-icon" aria-hidden="true">
+              <use href="#icon-mail" />
+            </svg>
+            <div class="contact-text">
+              <p class="contact-label">Email</p>
+              <a href="mailto:ibhmsy11@gmail.com">ibhmsy11@gmail.com</a>
+            </div>
+            <button class="copy-btn" type="button" data-copy="ibhmsy11@gmail.com" aria-live="polite" hidden>Copy</button>
+          </li>
+          <li class="contact-item">
+            <svg class="icon contact-icon" aria-hidden="true">
+              <use href="#icon-github" />
+            </svg>
+            <div class="contact-text">
+              <p class="contact-label">GitHub</p>
+              <a href="https://github.com/IbrahimaSy11" target="_blank" rel="noopener noreferrer">
+                github.com/IbrahimaSy11<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <svg class="icon contact-icon" aria-hidden="true">
+              <use href="#icon-linkedin" />
+            </svg>
+            <div class="contact-text">
+              <p class="contact-label">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/ibrahima-sy-584361390/" target="_blank" rel="noopener noreferrer">
+                in/ibrahima-sy-584361390<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </li>
+        </ul>
       </div>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>N/A</h3>
-            <p class="experience-sub">N/A</p>
-          </div>
-          <span class="experience-date">Start-Year – End-Year</span>
-        </div>
-
-        <p class="experience-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
-
-        <div class="experience-tags">
-          <span>N/A</span>
-          <span>N/A</span>
-          <span>N/A</span>
-        </div>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>N/A</h3>
-            <p class="experience-sub">N/A</p>
-          </div>
-          <span class="experience-date">Start-Year – End-Year</span>
-        </div>
-
-        <p class="experience-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium tincidunt lacus. Nulla gravida orci
-          a odio.
-          Nullam varius, turpis et commodo pharetra, est eros bibendum elit.
-        </p>
-
-        <div class="experience-tags">
-          <span>N/A</span>
-          <span>N/A</span>
-          <span>N/A</span>
-        </div>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>N/A</h3>
-            <p class="experience-sub">N/A</p>
-          </div>
-          <span class="experience-date">Start-Year – End-Year</span>
-        </div>
-
-        <p class="experience-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium tincidunt lacus. Nulla gravida orci
-          a odio.
-          Nullam varius, turpis et commodo pharetra, est eros bibendum elit.
-        </p>
-
-        <div class="experience-tags">
-          <span>N/A</span>
-          <span>N/A</span>
-          <span>N/A</span>
-        </div>
-      </div>
-
     </section>
-    <!-- =========================================================== -->
-    <section class="contact-section" id="contact">
-      <h2 class="contact-title">Contact Me</h2>
-      <p class="contact-subtitle">Have an opportunity or just want to say hi? I'd love to hear from you.</p>
-
-      <form class="contact-card" action="#" method="post">
-        <label class="contact-label" for="name">Name</label>
-        <input class="contact-input" type="text" id="name" name="name" placeholder="Your name" />
-
-        <label class="contact-label" for="email">Email</label>
-        <input class="contact-input" type="email" id="email" name="email" placeholder="your@email.com" />
-
-        <label class="contact-label" for="message">Message</label>
-        <textarea class="contact-textarea" id="message" name="message" rows="4"
-          placeholder="What's on your mind?"></textarea>
-
-        <button class="contact-btn" type="submit">Send Message</button>
-      </form>
-    </section>
-
-    <footer class="site-footer">
-      <div class="footer-icons">
-        <a href="https://www.linkedin.com/in/ibrahima-sy-584361390/" target="_blank" rel="noopener noreferrer">
-          <i class="ri-linkedin-box-fill"></i>
-        </a>
-        <a href="https://github.com/IbrahimaSy11" target="_blank" rel="noopener noreferrer">
-          <i class="ri-github-fill"></i>
-        </a>
-        <a href="mailto:your-email@example.com">
-          <i class="ri-mail-fill"></i>
-        </a>
-      </div>
-
-      <div class="footer-divider"></div>
-      <p class="footer-text">© 2026 Built by Ibrahima Sy</p>
-    </footer>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Ibrahima Sy</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
 </body>
 
 </html>
